@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philip A. Ebert — Philosophy, University of Salzburg</title>
+    <meta name="description" content="Philip A. Ebert — Professor of Philosophy at the Paris Lodron University Salzburg.">
+    <meta name="author" content="Philip A. Ebert">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Philip A. Ebert">
+    <meta property="og:title" content="Philip A. Ebert — Philosophy, University of Salzburg">
+    <meta property="og:url" content="https://philip-ebert.github.io">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --text: #2a2a2a; --text-secondary: #5a5a5a; --heading: #1a1a1a; --link: #8b4513; --link-hover: #6b3410; --accent: #8b4513; --bg: #faf9f7; --bg-card: #ffffff; --border: #e8e4de; --border-light: #f0ece6; --shadow: rgba(0,0,0,0.06); --serif: 'EB Garamond', Georgia, 'Times New Roman', serif; --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        html { font-size: 18px; scroll-behavior: smooth; }
+        body { font-family: var(--serif); color: var(--text); background: var(--bg); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+        a { color: var(--link); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--link-hover); }
+        .me { text-decoration: underline; text-underline-offset: 2px; }
+        .nav { position: sticky; top: 0; z-index: 100; background: rgba(250,249,247,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-light); }
+        .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+        .nav-name { font-family: var(--sans); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; color: var(--heading); }
+        .nav-links { display: flex; gap: 1.75rem; }
+        .nav-links a { font-family: var(--sans); font-size: 0.78rem; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 0; border-bottom: 1.5px solid transparent; transition: all 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--heading); border-bottom-color: var(--accent); }
+        .menu-btn { display: none; background: none; border: none; font-size: 1.3rem; cursor: pointer; color: var(--text); padding: 4px; }
+        .page-section { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+        .hero { padding-top: 4.5rem; padding-bottom: 3.5rem; }
+        .hero-layout { display: grid; grid-template-columns: 1fr 260px; gap: 3rem; align-items: start; }
+        .hero h1 { font-family: var(--serif); font-size: 2.4rem; font-weight: 400; color: var(--heading); line-height: 1.2; margin-bottom: 0.3rem; }
+        .hero h1 a { color: var(--heading); border-bottom: none; }
+        .hero h1 a:hover { color: var(--link); }
+        .hero-subtitle { font-family: var(--sans); font-size: 0.85rem; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.02em; margin-bottom: 2rem; }
+        .hero-bio { font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; }
+        .hero-bio a { border-bottom: 1px solid var(--border); }
+        .hero-bio a:hover { border-bottom-color: var(--accent); }
+        .research-label { font-family: var(--sans); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-bottom: 0.6rem; }
+        .research-areas { list-style: none; margin-bottom: 2rem; }
+        .research-areas li { font-size: 0.95rem; padding: 0.25rem 0 0.25rem 1.1rem; position: relative; color: var(--text); }
+        .research-areas li::before { content: ''; position: absolute; left: 0; top: 0.7rem; width: 5px; height: 5px; border-radius: 50%; background: var(--border); }
+        .contact-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.6rem; box-shadow: 0 1px 4px var(--shadow); }
+        .contact-card h3 { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-bottom: 0.9rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); }
+        .contact-card p { font-family: var(--sans); font-size: 0.82rem; line-height: 1.7; color: var(--text); margin-bottom: 0.75rem; }
+        .contact-card p:last-child { margin-bottom: 0; }
+        .contact-card a { font-weight: 500; border-bottom: 1px solid var(--border); }
+        .contact-card a:hover { border-bottom-color: var(--accent); }
+        .page-body { max-width: 720px; padding: 3.5rem 0 4rem; }
+        .page-body h1 { font-family: var(--serif); font-size: 2rem; font-weight: 400; color: var(--heading); margin-bottom: 0.5rem; }
+        .page-body-divider { width: 40px; height: 2px; background: var(--border); margin-bottom: 2rem; }
+        .page-body p, .page-body li { font-size: 0.92rem; line-height: 1.8; }
+        .page-body p { margin-bottom: 0.85rem; }
+        .page-body h2 { font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--heading); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-light); }
+        .page-body ul, .page-body ol { padding-left: 0; list-style: none; margin-bottom: 1.25rem; }
+        .page-body li { margin-bottom: 0.9rem; padding-left: 0; }
+        .page-body a { border-bottom: 1px solid var(--border); }
+        .page-body a:hover { border-bottom-color: var(--accent); }
+        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        .contact-info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; box-shadow: 0 1px 4px var(--shadow); }
+        .contact-info-card h3 { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+        .contact-info-card p { font-family: var(--sans); font-size: 0.85rem; line-height: 1.7; margin-bottom: 0.75rem; }
+        .profile-links { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.5rem; }
+        .profile-links a { font-family: var(--sans); font-size: 0.85rem; font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 5px; background: var(--bg-card); transition: all 0.2s; }
+        .profile-links a:hover { border-color: var(--accent); background: #fdf8f4; }
+        .repo-bar { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; margin-bottom: 2rem; padding: 1rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 1px 4px var(--shadow); }
+        .repo-bar-label { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); width: 100%; margin-bottom: 0.25rem; }
+        .repo-bar a { font-family: var(--sans); font-size: 0.82rem; font-weight: 500; padding: 0.3rem 0.7rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg); transition: all 0.2s; }
+        .repo-bar a:hover { border-color: var(--accent); background: #fdf8f4; }
+        .cv-entry { font-size: 0.92rem; margin-bottom: 0.6rem; line-height: 1.7; }
+        .cv-date { font-family: var(--sans); font-size: 0.78rem; color: var(--text-secondary); }
+        .footer { border-top: 1px solid var(--border); padding: 1.75rem 0; text-align: center; }
+        .footer p { font-family: var(--sans); font-size: 0.75rem; color: var(--text-secondary); }
+        .footer a { color: var(--text-secondary); }
+        .footer a:hover { color: var(--heading); }
+        .page { display: none; }
+        .page.active { display: block; }
+        @media (max-width: 720px) { html { font-size: 17px; } .menu-btn { display: block; } .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: rgba(250,249,247,0.98); backdrop-filter: blur(12px); flex-direction: column; padding: 1rem 2rem 1.25rem; gap: 0.75rem; border-bottom: 1px solid var(--border); } .nav-links.open { display: flex; } .hero { padding-top: 3rem; padding-bottom: 2.5rem; } .hero-layout { grid-template-columns: 1fr; gap: 2rem; } .hero h1 { font-size: 1.9rem; } .contact-layout { grid-template-columns: 1fr; gap: 2rem; } }
+    </style>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a href="#" class="nav-name" onclick="showPage('home'); return false;">Philip A. Ebert</a><button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button><div class="nav-links"><a href="#" class="active" data-page="home" onclick="showPage('home'); return false;">Home</a><a href="#" data-page="publications" onclick="showPage('publications'); return false;">Publications</a><a href="#" data-page="contact" onclick="showPage('contact'); return false;">Contact &amp; CV</a></div></div></nav>
+<!-- HOME -->
+<div id="page-home" class="page active">
+<section class="hero page-section"><div class="hero-layout"><div>
+<h1><a href="https://uni-salzburg.elsevierpure.com/en/persons/philip-ebert/" target="_blank">Philip A. Ebert</a></h1>
+<p class="hero-subtitle">Professor of Philosophy &middot; Paris Lodron University Salzburg</p>
+<p class="hero-bio">I&rsquo;m a Professor of <a href="https://www.plus.ac.at/philosophie/" target="_blank">Philosophy at the Paris Lodron University Salzburg</a>, Austria.</p>
+<p class="research-label">Research</p>
+<ul class="research-areas">
+<li>Epistemology, in particular risk and rationality</li>
+<li>Applied decision-making: expert judgement &amp; forecasting</li>
+<li>Applied epistemology: risk communication and the ethics of influence</li>
+<li>Early Analytic Philosophy, in particular Gottlob Frege</li>
+<li>Philosophy of Mathematics, in particular Abstractionism</li>
+</ul>
+</div>
+<div class="contact-card"><h3>Contact</h3><p>Philip A. Ebert<br>Professor of Philosophy<br>Department of Philosophy<br>Paris Lodron University Salzburg<br>Franziskanergasse 1<br>5020 Salzburg, Austria</p><p><a href="mailto:philip.ebert@plus.ac.at">philip.ebert@plus.ac.at</a></p></div>
+</div></section>
+</div>
+<!-- PUBLICATIONS -->
+<div id="page-publications" class="page">
+<div class="page-section"><div class="page-body">
+<h1>Publications</h1>
+<div class="page-body-divider"></div>
+<div class="repo-bar">
+<span class="repo-bar-label">Profiles:</span>
+<a href="https://orcid.org/0000-0002-3730-0600" target="_blank">ORCID</a>
+<a href="https://uni-salzburg.elsevierpure.com/en/persons/philip-ebert/" target="_blank">PURE Salzburg</a>
+<a href="https://philpapers.org/profile/2493" target="_blank">PhilPeople</a>
+<a href="https://www.researchgate.net/profile/Philip_Ebert" target="_blank">ResearchGate</a>
+<a href="https://scholar.google.de/citations?hl=en&pli=1&user=mAlE3S8AAAAJ" target="_blank">Google Scholar</a>
+</div>
+<h2>Books</h2>
+<ul>
+<li>Frege, G. (2013/2016). <em>Grundgesetze der Arithmetik</em>. Transl. and ed. by <span class="me">Ebert, P.A.</span> and Rossberg, M. Oxford: Oxford University Press. [<a href="http://www.frege.info" target="_blank">Website</a>]</li>
+</ul>
+<h2>Edited Books and Journals</h2>
+<ul>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (Eds.) (2019). <a href="https://global.oup.com/academic/product/essays-on-freges-basic-laws-of-arithmetic-9780198712084" target="_blank"><em>Essays on Frege&rsquo;s Basic Laws of Arithmetic</em></a>. Oxford: Oxford University Press.</li>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (Eds.) (2016). <a href="https://global.oup.com/academic/product/abstractionism-9780199645268" target="_blank"><em>Abstractionism</em></a>. Oxford: Oxford University Press.</li>
+<li><span class="me">Ebert, P.A.</span> and Smith, M. (Eds.) (2012). <a href="https://onlinelibrary.wiley.com/toc/17468361/66/3" target="_blank"><em>Belief and Degree of Belief</em></a>. Special issue of <em>Dialectica</em> 66(3).</li>
+</ul>
+<h2>Journal Articles (refereed)</h2>
+<ul>
+<li><span class="me">Ebert, P.A.</span>, Miller, D.L., Comerford, D., and Diggins, M. (2025). &ldquo;<a href="https://doi.org/10.1111/risa.70016" target="_blank">End user and forecaster interpretations of the European Avalanche Danger Scale</a>.&rdquo; <em>Risk Analysis</em>, 45(8),
+2069&ndash;2465.</li>
+<li><span class="me">Ebert, P.A.</span>, Durbach, I.N., and Field, C. (2024). &ldquo;<a href="https://www.tandfonline.com/doi/full/10.1080/00948705.2024.2335350" target="_blank">Gratuitous Risk: danger and recklessness perception of adventure sports participants</a>.&rdquo; <em>Journal of the Philosophy of Sport</em>, 51(2), 267&ndash;284.</li>
+<li><span class="me">Ebert, P.A.</span> and Durbach, I.N. (2023). &ldquo;<a href="https://www.tandfonline.com/doi/full/10.1080/13669877.2022.2091001" target="_blank">Expert and lay judgements of danger and recklessness in adventure sports</a>.&rdquo; <em>Journal of Risk Research</em>, 26(2), 133&ndash;146.</li>
+<li><span class="me">Ebert, P.A.</span> and Milne, P. (2022). &ldquo;<a href="https://nhess.copernicus.org/articles/22/539/2022/" target="_blank">Methodological and conceptual challenges in rare and severe event forecast verification</a>.&rdquo; <em>Natural Hazard and Earth System Science</em>, 22(2), 1&ndash;19. Open Access.</li>
+<li><span class="me">Ebert, P.A.</span> and Morreau, M. (2022). &ldquo;<a href="https://www.tandfonline.com/doi/full/10.1080/14729679.2021.2012216" target="_blank">Safety in Numbers: how social choice theory can inform avalanche risk management</a>.&rdquo; <em>Journal for Adventure Education and Outdoor Learning</em>. Open Access.</li>
+<li><span class="me">Ebert, P.A.</span>, Smith, M., and Durbach, I. (2020). &ldquo;<a href="https://doi.org/10.1111/phpr.12598" target="_blank">Varieties of Risk</a>.&rdquo; <em>Philosophy and Phenomenological Research</em>, 101(2), 432&ndash;455. Open Access.</li>
+<li><span class="me">Ebert, P.A.</span> (2019). &ldquo;<a href="https://www.tandfonline.com/doi/full/10.1080/14729679.2018.1508356" target="_blank">Bayesian Reasoning in avalanche terrain: a theoretical study</a>.&rdquo; <em>Journal for Adventure Education and Outdoor Research</em>, 19(1), 84&ndash;95. Open Access.</li>
+<li><span class="me">Ebert, P.A.</span>, Smith, M., and Durbach, I. (2018). &ldquo;<a href="https://www.tandfonline.com/doi/full/10.1080/09515089.2017.1367767" target="_blank">Lottery Judgements: a philosophical and experimental study</a>.&rdquo; <em>Philosophical Psychology</em>, 31(1), 110&ndash;138. Open Access.</li>
+<li><span class="me">Ebert, P.A.</span> and Freibichler, W. (2017). &ldquo;<a href="https://jorgdesign.springeropen.com/articles/10.1186/s41469-017-0014-1" target="_blank">Nudge management: applying behavioural science to increase knowledge worker productivity</a>.&rdquo; <em>Journal for Organization Design</em>, 6(4), 1&ndash;6. Open Access.</li>
+<li><span class="me">Ebert, P.A.</span> and Cook, R.T. (2016). &ldquo;<a href="https://www.pdcnet.org/jphil/content/jphil_2016_0113_0007_0309_0345" target="_blank">Frege&rsquo;s Recipe</a>.&rdquo; <em>The Journal of Philosophy</em>, cxiii(7), 309&ndash;345.</li>
+<li><span class="me">Ebert, P.A.</span> (2016). &ldquo;<a href="https://academic.oup.com/philmat/article-abstract/24/1/9/2362491" target="_blank">Frege on Sense-Identity, Basic Law V, and Analysis</a>.&rdquo; <em>Philosophia Mathematica</em>, 24(1), 9&ndash;29.</li>
+<li><span class="me">Ebert, P.A.</span> (2015). &ldquo;<a href="http://booksandjournals.brillonline.com/content/journals/10.1163/9789004310841_003" target="_blank">Dummett&rsquo;s Criticism of the Context Principle</a>.&rdquo; <em>Grazer Philosophische Studien</em>, 92, 23&ndash;51.</li>
+<li>Green, J.J., <span class="me">Ebert, P.A.</span>, and Rossberg, M. (2015). &ldquo;<a href="https://www.cambridge.org/core/journals/bulletin-of-symbolic-logic/article/convenience-of-the-typesetter-notation-and-typography-in-freges-grundgesetze-der-arithmetik/6CA1E9F7E3BD58565736637922045C71" target="_blank">The Convenience of the Typesetter</a>.&rdquo; <em>The Bulletin of Symbolic Logic</em>, 21(1), 15&ndash;30.</li>
+<li><span class="me">Ebert, P.A.</span> and Robertson, S. (2013). &ldquo;<a href="https://dspace.stir.ac.uk/bitstream/1893/16005/1/ApleaforRisk_published.pdf" target="_blank">A Plea for Risk</a>.&rdquo; <em>Royal Institute of Philosophy Supplement</em>, 73, 45&ndash;64.</li>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (2009). &ldquo;<a href="https://www.tandfonline.com/doi/full/10.1080/01445340903102813" target="_blank">Cantor on Frege&rsquo;s Foundations of Arithmetic</a>.&rdquo; <em>History and Philosophy of Logic</em>, 30(4), 341&ndash;348.</li>
+<li><span class="me">Ebert, P.A.</span> and Shapiro, S. &ldquo;<a href="https://link.springer.com/article/10.1007/s11229-007-9263-9" target="_blank">The Good, the Bad and the Ugly</a>.&rdquo; <em>Synthese</em>, 170(3), 415&ndash;441.</li>
+<li><span class="me">Ebert, P.A.</span> &ldquo;<a href="https://academic.oup.com/philmat/article-abstract/16/2/209/1420740" target="_blank">A Puzzle about Ontological Commitments</a>.&rdquo; <em>Philosophia Mathematica</em>, 16(2), 209&ndash;226.</li>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. &ldquo;What is the purpose of Neo-Logicism?&rdquo; <em>Traveaux de Logique</em> (18), 33&ndash;61.</li>
+<li><span class="me">Ebert, P.A.</span> (2005). &ldquo;<a href="https://www.tandfonline.com/doi/abs/10.1080/00048400500338724" target="_blank">Transmission of Warrant-Failure and the Notion of Epistemic Analyticity</a>.&rdquo; <em>Australasian Journal of Philosophy</em>, 83(4), 505&ndash;21.</li>
+<li><span class="me">Ebert, P.A.</span> and Cook, R.T. (2005). &ldquo;<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1746-8361.2005.1023.x" target="_blank">Abstraction and Identity</a>.&rdquo; <em>Dialectica</em>, 59(2), 1&ndash;19.</li>
+</ul>
+<h2>Articles in Collections</h2>
+<ul>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (forthcoming). &ldquo;Gottlob Frege.&rdquo; In <em>Cambridge Companion to the History of Analytic Philosophy</em>, ed. M. Rossberg. Cambridge University Press.</li>
+<li><span class="me">Ebert, P.A.</span>, Cook, R.T., and Rossberg, M. (2022). &ldquo;<a href="http://proofsystem.github.io/Encyclopedia/" target="_blank">Frege&rsquo;s Concept-Script</a>.&rdquo; In <em>Encyclopaedia of Proof Systems</em>, Chapter 2, pp.2&ndash;7. London: College Publications.</li>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (2019). &ldquo;<a href="https://www.oxfordscholarship.com/view/10.1093/oso/9780198712084.001.0001/oso-9780198712084-chapter-13" target="_blank">Mathematical Creationism in Frege&rsquo;s <em>Grundgesetze</em>?</a>&rdquo; In <span class="me">Ebert, P.A.</span> and Rossberg, M. (Eds.), <em>Essays on Frege&rsquo;s Basic Laws of Arithmetic</em>, Chapter 13, pp.325&ndash;342. Oxford University Press.</li>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (2019). &ldquo;<a href="https://www.oxfordscholarship.com/view/10.1093/oso/9780198712084.001.0001/oso-9780198712084-chapter-22" target="_blank">Contemporary Reviews of Frege&rsquo;s <em>Grundgesetze</em></a>.&rdquo; In <span class="me">Ebert, P.A.</span> and Rossberg, M. (Eds.), <em>Essays on Frege&rsquo;s Basic Laws of Arithmetic</em>, Chapter 22, pp.637&ndash;651. Oxford University Press.</li>
+<li><span class="me">Ebert, P.A.</span> (2016). &ldquo;A Framework for Implicit Definitions and the A priori.&rdquo; In <span class="me">Ebert, P.A.</span> and Rossberg, M. (Eds.), <em>Abstractionism</em>, Chapter 7, pp.133&ndash;160. Oxford University Press.</li>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (2016). &ldquo;Introduction to Abstractionism.&rdquo; In <span class="me">Ebert, P.A.</span> and Rossberg, M. (Eds.), <em>Abstractionism</em>, Chapter 1, pp.13&ndash;33. Oxford University Press.</li>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (2013). &ldquo;Translators&rsquo; Introduction.&rdquo; In Frege, G., <em>Basic Laws of Arithmetic</em>, pp.xiii&ndash;xxxix. Oxford University Press.</li>
+<li><span class="me">Ebert, P.A.</span> and Smith, M. (2012). &ldquo;Introduction: Outright Beliefs and Degrees of Belief.&rdquo; <em>Dialectica</em>, 66(3), 1&ndash;4.</li>
+<li><span class="me">Ebert, P.A.</span> and Robertson, S. (2010). &ldquo;Mountaineering and the Value of Self-sufficiency.&rdquo; In S. Schmid (Ed.), <em>Climbing &mdash; Philosophy for Everyone</em>, Chapter 7, pp.93&ndash;105. Routledge. Shortlisted for the Boardman-Tasker Award 2010.</li>
+<li><span class="me">Ebert, P.A.</span> and Robertson, S. (2007). &ldquo;Adventure, Climbing Excellence and the Practice of &lsquo;Bolting&rsquo;.&rdquo; In M. McNamee (Ed.), <em>Philosophy, Risk and Adventure Sports</em>. Routledge.</li>
+<li><span class="me">Ebert, P.A.</span> and Rossberg, M. (2009). &ldquo;Ed Zalta&rsquo;s version of Neo-Logicism &mdash; a friendly letter of complaint.&rdquo; In H. Leitgeb and A. Hieke (Eds.), <em>Reduction &ndash; Abstraction &ndash; Analysis</em>, pp.303&ndash;307.</li>
+</ul>
+<h2>Conference Proceedings</h2>
+<ul>
+<li><span class="me">Ebert, P.A.</span> (2024). &ldquo;<a href="https://arc.lib.montana.edu/snow-science/objects/ISSW2024_O12.5.pdf" target="_blank">End user Interpretation of the European Avalanche Danger Scale: A case study from Scotland</a>.&rdquo; <em>Proceedings ISSW, Troms&oslash;, Norway</em>, 1626&ndash;1632.</li>
+<li><span class="me">Ebert, P.A.</span> (2019). &ldquo;<a href="http://arc.lib.montana.edu/snow-science/objects/ISSW2018_P15.12.pdf" target="_blank">A Bayesian Perspective on Avalanche Decision-Making and the Relevance of Stability Tests</a>.&rdquo; <em>Proceedings ISSW, Innsbruck, Austria</em>, pp.1334&ndash;1338.</li>
+<li><span class="me">Ebert, P.A.</span> and Photopoulou, T. (2013). &ldquo;<a href="http://arc.lib.montana.edu/snow-science/objects/ISSW13_paper_O5-04.pdf" target="_blank">Bayes&rsquo; beacon: avalanche prediction, competence and evidence for competence</a>.&rdquo; <em>Proceedings ISSW, Grenoble, France</em>, pp.363&ndash;70.</li>
+</ul>
+<h2>Discussion Notes and Book Reviews</h2>
+<ul>
+<li><span class="me">Ebert, P.A.</span> (2017). Review of <em>Abstraction and Infinity</em> by P. Mancosu. <a href="https://ndpr.nd.edu/news/abstraction-and-infinity/" target="_blank">NDPR</a>.</li>
+<li><span class="me">Ebert, P.A.</span> (2015). Review of <em>Reading Frege&rsquo;s Grundgesetze</em> by R.G. Heck Jr. <em>Philosophia Mathematica</em>, 23(2), 289&ndash;293.</li>
+<li><span class="me">Ebert, P.A.</span> (2014). Review of <em>Frege&rsquo;s Theorem</em> by R.G. Heck Jr. <em>Philosophical Quarterly</em>, 64(254), 166&ndash;169.</li>
+<li><span class="me">Ebert, P.A.</span> (2011). Review of <em>A Critical Introduction to the Philosophy of Gottlob Frege</em> by G.E. Rossado Haddock. <em>Philosophia Mathematica</em>, 19(3), 363&ndash;367.</li>
+<li><span class="me">Ebert, P.A.</span> (2010). &ldquo;Going to ground with concepts&rdquo; (review of C.S. Jenkins). <em>Metascience</em>, 19(2), 217&ndash;220.</li>
+<li><span class="me">Ebert, P.A.</span> and Cook, R.T. (2004). &ldquo;Discussion Note: Kit Fine&rsquo;s Limits of Abstraction.&rdquo; <em>British Journal of Philosophy of Science</em>, 55(4), 791&ndash;800.</li>
+</ul>
+<h2>Newspaper, Magazine and Other Articles</h2>
+<ul>
+<li>Schubert, T., Zsolt, K., and <span class="me">Ebert, P.A.</span> (2023). &ldquo;<a href="https://doi.org/10.4414/saez.2023.22151" target="_blank">Optimal aus Fehlern lernen</a>.&rdquo; <em>Schweiz &Auml;rzteztg.</em> 104(40), 72&ndash;73.</li>
+<li><span class="me">Ebert, P.A.</span> and Zweifel, B. (2022). &ldquo;Wisdom of crowds in den Bergen: Wie f&auml;llen wir gute Gruppenentscheide?&rdquo; <em>Bergsteigen</em>, 121, 32&ndash;38.</li>
+<li><span class="me">Ebert, P.A.</span> and Freibichler, W. (2017). &ldquo;Nudge Management: Was der Nobelpreis 2017 f&uuml;r den Aufsichtsrat bedeutet.&rdquo; <em>Der Aufsichtsrat</em>, 11, 160&ndash;61.</li>
+<li><span class="me">Ebert, P.A.</span>, Freibichler, W., and Schubert, T. (2016). &ldquo;Nudge Management &mdash; Wie F&uuml;hrungskr&auml;fte kluges Selbstmanagement anstossen.&rdquo; <em>Zeitschrift f&uuml;r F&uuml;hrung und Organisation</em>, 86, 82&ndash;86.</li>
+<li><span class="me">Ebert, P.A.</span> (2015). &ldquo;<a href="https://dspace.stir.ac.uk/bitstream/1893/28310/1/PEbert-Competence_Avalanche-Review.pdf" target="_blank">Know your competence</a>.&rdquo; <em>The Avalanche Review</em>, 33(4).</li>
+<li><span class="me">Ebert, P.A.</span> and Robertson, S. (2014). &ldquo;[Riskant]&ndash;[Trotzdem]&ndash;[Wegen]: Ein Pl&auml;doyer f&uuml;r das Risiko im Bergsport.&rdquo; <em>Alpenvereinsjahrbuch BERG 2014</em>, 138, pp.196&ndash;202.</li>
+<li><span class="me">Ebert, P.A.</span> (2008). &ldquo;What Mathematical Knowledge could not be.&rdquo; <em>Aporia</em>, 1(1), 46&ndash;70.</li>
+</ul>
+<h2>Repositories</h2>
+<p style="margin-top:0.5rem;"><a href="https://orcid.org/0000-0002-3730-0600" target="_blank">ORCID: 0000-0002-3730-0600</a> &nbsp;&middot;&nbsp; <a href="https://uni-salzburg.elsevierpure.com/en/persons/philip-ebert/" target="_blank">University of Salzburg PURE</a> &nbsp;&middot;&nbsp; <a href="https://philpapers.org/profile/2493" target="_blank">PhilPeople</a> &nbsp;&middot;&nbsp; <a href="https://www.researchgate.net/profile/Philip_Ebert" target="_blank">ResearchGate</a> &nbsp;&middot;&nbsp; <a href="https://scholar.google.de/citations?hl=en&pli=1&user=mAlE3S8AAAAJ" target="_blank">Google Scholar</a></p>
+</div></div>
+</div>
+<!-- CONTACT & CV -->
+<div id="page-contact" class="page">
+<div class="page-section"><div class="page-body">
+<h1>Contact &amp; CV</h1>
+<div class="page-body-divider"></div>
+<div class="contact-layout">
+<div>
+<div class="contact-info-card"><h3>Get in Touch</h3><p>Philip A. Ebert<br>Professor of Philosophy<br>Department of Philosophy<br>Paris Lodron University Salzburg<br>Franziskanergasse 1<br>5020 Salzburg, Austria</p><p><a href="mailto:philip.ebert@plus.ac.at">philip.ebert@plus.ac.at</a></p></div>
+<div style="margin-top:1.5rem;"><div class="profile-links">
+<a href="mailto:philip.ebert@plus.ac.at">&#9993;&ensp;Email</a>
+<a href="https://orcid.org/0000-0002-3730-0600" target="_blank">ORCID: 0000-0002-3730-0600</a>
+<a href="https://uni-salzburg.elsevierpure.com/en/persons/philip-ebert/" target="_blank">University of Salzburg PURE</a>
+<a href="https://www.linkedin.com/in/philip-ebert-8b92b215/" target="_blank">LinkedIn</a>
+<a href="https://www.researchgate.net/profile/Philip_Ebert" target="_blank">ResearchGate</a>
+<a href="https://scholar.google.de/citations?hl=en&pli=1&user=mAlE3S8AAAAJ" target="_blank">Google Scholar</a>
+<a href="https://philpapers.org/profile/2493" target="_blank">PhilPeople</a>
+</div></div>
+</div>
+<div>
+<h2 style="margin-top:0;">Areas of Specialisation</h2>
+<p>Epistemology (formal, traditional, experimental), History of Analytic Philosophy, Philosophy of Mathematics.</p>
+<h2>Areas of Competence</h2>
+<p>Philosophy of Science, Philosophy of Logic, Philosophy of Language, Logic, Philosophy of Sport.</p>
+<h2>Employment</h2>
+<p class="cv-entry"><span class="cv-date">2026 &ndash; present</span><br>Professor, Paris Lodron University Salzburg</p>
+<p class="cv-entry"><span class="cv-date">2020 &ndash; 2025</span><br>Professor, University of Stirling</p>
+<p class="cv-entry"><span class="cv-date">2012 &ndash; 2020</span><br>Senior Lecturer, University of Stirling</p>
+<p class="cv-entry"><span class="cv-date">2007 &ndash; 2012</span><br>Lecturer, University of Stirling</p>
+<p class="cv-entry"><span class="cv-date">2005 &ndash; 2007</span><br>PostDoctoral Research Fellow, Arch&eacute;, University of St Andrews</p>
+<h2>Education</h2>
+<p class="cv-entry"><span class="cv-date">2005</span><br>Ph.D., University of St Andrews<br><em>Supervisors:</em> Prof. Crispin Wright and Prof. Stewart Shapiro</p>
+<p class="cv-entry"><span class="cv-date">2000</span><br>M.Litt. (Philosophy), St Andrews&ndash;Stirling Graduate Programme</p>
+<p style="margin-top:2rem;font-family:var(--sans);font-size:0.85rem;color:var(--text-secondary);">For a full CV, please <a href="mailto:philip.ebert@plus.ac.at">email me</a>.</p>
+</div>
+</div>
+</div></div>
+</div>
+<footer class="footer"><div class="page-section"><p>&copy; 2025 Philip A. Ebert &middot; <a href="mailto:philip.ebert@plus.ac.at">Contact</a></p></div></footer>
+<script>
+function showPage(name){document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});document.getElementById('page-'+name).classList.add('active');document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.toggle('active',a.dataset.page===name)});document.querySelector('.nav-links').classList.remove('open');window.scrollTo(0,0);history.pushState(null,'',name==='home'?'/':'#'+name)}
+window.addEventListener('popstate',function(){var hash=window.location.hash.replace('#','');showPage(hash||'home')});
+window.addEventListener('load',function(){var hash=window.location.hash.replace('#','');if(hash&&document.getElementById('page-'+hash))showPage(hash)});
+</script>
+</body>
+</html>
