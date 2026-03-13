@@ -32,6 +32,8 @@
         .hero { padding: 4.5rem 0 3.5rem; }
         .hero-layout { display: grid; grid-template-columns: 1fr 260px; gap: 3rem; align-items: start; }
         .hero h1 { font-family: var(--serif); font-size: 2.4rem; font-weight: 400; color: var(--heading); line-height: 1.2; margin-bottom: 0.3rem; }
+        .hero h1 a { color: var(--heading); border-bottom: none; }
+        .hero h1 a:hover { color: var(--link); }
         .hero-subtitle { font-family: var(--sans); font-size: 0.85rem; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.02em; margin-bottom: 2rem; }
         .hero-bio { font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; }
         .hero-bio a { border-bottom: 1px solid var(--border); }
@@ -76,11 +78,10 @@
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="#" class="nav-name" onclick="showPage('home'); return false;">Philip A. Ebert</a><button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button><div class="nav-links"><a href="#" class="active" data-page="home" onclick="showPage('home'); return false;">Home</a><a href="#" data-page="publications" onclick="showPage('publications'); return false;">Publications</a><a href="#" data-page="contact" onclick="showPage('contact'); return false;">Contact &amp; CV</a></div></div></nav>
-
 <!-- HOME -->
 <div id="page-home" class="page active">
 <section class="hero page-section"><div class="hero-layout"><div>
-<h1>Philip A. Ebert</h1>
+<h1><a href="https://uni-salzburg.elsevierpure.com/en/persons/philip-ebert/" target="_blank">Philip A. Ebert</a></h1>
 <p class="hero-subtitle">Professor of Philosophy &middot; Paris Lodron University Salzburg</p>
 <p class="hero-bio">I&rsquo;m a Professor of <a href="https://www.plus.ac.at/philosophie/" target="_blank">Philosophy at the Paris Lodron University Salzburg</a>, Austria.</p>
 <p class="research-label">Research</p>
@@ -95,28 +96,24 @@
 <div class="contact-card"><h3>Contact</h3><p>Philip A. Ebert<br>Professor of Philosophy<br>Department of Philosophy<br>Paris Lodron University Salzburg<br>Franziskanergasse 1<br>5020 Salzburg, Austria</p><p><a href="mailto:philip.ebert@plus.ac.at">philip.ebert@plus.ac.at</a></p></div>
 </div></section>
 </div>
-
 <!-- PUBLICATIONS -->
 <div id="page-publications" class="page">
 <div class="page-section"><div class="page-body">
 <h1>Publications</h1>
 <div class="page-body-divider"></div>
-
 <h2>Books</h2>
 <ul>
 <li>Frege, G. (2013/2016). <em>Grundgesetze der Arithmetik</em>. Transl. and ed. by <span class="me">Ebert, P.A.</span> and Rossberg, M. Oxford: Oxford University Press. [<a href="http://www.frege.info" target="_blank">Website</a>]</li>
 </ul>
-
 <h2>Edited Books and Journals</h2>
 <ul>
 <li><span class="me">Ebert, P.A.</span> and Rossberg, M. (Eds.) (2019). <a href="https://global.oup.com/academic/product/essays-on-freges-basic-laws-of-arithmetic-9780198712084" target="_blank"><em>Essays on Frege&rsquo;s Basic Laws of Arithmetic</em></a>. Oxford: Oxford University Press.</li>
 <li><span class="me">Ebert, P.A.</span> and Rossberg, M. (Eds.) (2016). <a href="https://global.oup.com/academic/product/abstractionism-9780199645268" target="_blank"><em>Abstractionism</em></a>. Oxford: Oxford University Press.</li>
 <li><span class="me">Ebert, P.A.</span> and Smith, M. (Eds.) (2012). <a href="https://onlinelibrary.wiley.com/toc/17468361/66/3" target="_blank"><em>Belief and Degree of Belief</em></a>. Special issue of <em>Dialectica</em> 66(3).</li>
 </ul>
-
 <h2>Journal Articles (refereed)</h2>
 <ul>
-<li><span class="me">Ebert, P.A.</span>, Miller, D.L., Comerford, D., and Diggins, M. (2025). &ldquo;<a href="https://doi.org/10.1111/risa.70016" target="_blank">End user and forecaster interpretations of the European Avalanche Danger Scale</a>.&rdquo; <em>Risk Analysis</em>, 45(8), 
+<li><span class="me">Ebert, P.A.</span>, Miller, D.L., Comerford, D., and Diggins, M. (2025). &ldquo;<a href="https://doi.org/10.1111/risa.70016" target="_blank">End user and forecaster interpretations of the European Avalanche Danger Scale</a>.&rdquo; <em>Risk Analysis</em>, 45(8),
 2069&ndash;2465.</li>
 <li><span class="me">Ebert, P.A.</span>, Durbach, I.N., and Field, C. (2024). &ldquo;<a href="https://www.tandfonline.com/doi/full/10.1080/00948705.2024.2335350" target="_blank">Gratuitous Risk: danger and recklessness perception of adventure sports participants</a>.&rdquo; <em>Journal of the Philosophy of Sport</em>, 51(2), 267&ndash;284.</li>
 <li><span class="me">Ebert, P.A.</span> and Durbach, I.N. (2023). &ldquo;<a href="https://www.tandfonline.com/doi/full/10.1080/13669877.2022.2091001" target="_blank">Expert and lay judgements of danger and recklessness in adventure sports</a>.&rdquo; <em>Journal of Risk Research</em>, 26(2), 133&ndash;146.</li>
@@ -138,7 +135,6 @@
 <li><span class="me">Ebert, P.A.</span> (2005). &ldquo;<a href="https://www.tandfonline.com/doi/abs/10.1080/00048400500338724" target="_blank">Transmission of Warrant-Failure and the Notion of Epistemic Analyticity</a>.&rdquo; <em>Australasian Journal of Philosophy</em>, 83(4), 505&ndash;21.</li>
 <li><span class="me">Ebert, P.A.</span> and Cook, R.T. (2005). &ldquo;<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1746-8361.2005.1023.x" target="_blank">Abstraction and Identity</a>.&rdquo; <em>Dialectica</em>, 59(2), 1&ndash;19.</li>
 </ul>
-
 <h2>Articles in Collections</h2>
 <ul>
 <li><span class="me">Ebert, P.A.</span> and Rossberg, M. (forthcoming). &ldquo;Gottlob Frege.&rdquo; In <em>Cambridge Companion to the History of Analytic Philosophy</em>, ed. M. Rossberg. Cambridge University Press.</li>
@@ -153,14 +149,12 @@
 <li><span class="me">Ebert, P.A.</span> and Robertson, S. (2007). &ldquo;Adventure, Climbing Excellence and the Practice of &lsquo;Bolting&rsquo;.&rdquo; In M. McNamee (Ed.), <em>Philosophy, Risk and Adventure Sports</em>. Routledge.</li>
 <li><span class="me">Ebert, P.A.</span> and Rossberg, M. (2009). &ldquo;Ed Zalta&rsquo;s version of Neo-Logicism &mdash; a friendly letter of complaint.&rdquo; In H. Leitgeb and A. Hieke (Eds.), <em>Reduction &ndash; Abstraction &ndash; Analysis</em>, pp.303&ndash;307.</li>
 </ul>
-
 <h2>Conference Proceedings</h2>
 <ul>
 <li><span class="me">Ebert, P.A.</span> (2024). &ldquo;<a href="https://arc.lib.montana.edu/snow-science/objects/ISSW2024_O12.5.pdf" target="_blank">End user Interpretation of the European Avalanche Danger Scale: A case study from Scotland</a>.&rdquo; <em>Proceedings ISSW, Troms&oslash;, Norway</em>, 1626&ndash;1632.</li>
 <li><span class="me">Ebert, P.A.</span> (2019). &ldquo;<a href="http://arc.lib.montana.edu/snow-science/objects/ISSW2018_P15.12.pdf" target="_blank">A Bayesian Perspective on Avalanche Decision-Making and the Relevance of Stability Tests</a>.&rdquo; <em>Proceedings ISSW, Innsbruck, Austria</em>, pp.1334&ndash;1338.</li>
 <li><span class="me">Ebert, P.A.</span> and Photopoulou, T. (2013). &ldquo;<a href="http://arc.lib.montana.edu/snow-science/objects/ISSW13_paper_O5-04.pdf" target="_blank">Bayes&rsquo; beacon: avalanche prediction, competence and evidence for competence</a>.&rdquo; <em>Proceedings ISSW, Grenoble, France</em>, pp.363&ndash;70.</li>
 </ul>
-
 <h2>Discussion Notes and Book Reviews</h2>
 <ul>
 <li><span class="me">Ebert, P.A.</span> (2017). Review of <em>Abstraction and Infinity</em> by P. Mancosu. <a href="https://ndpr.nd.edu/news/abstraction-and-infinity/" target="_blank">NDPR</a>.</li>
@@ -170,7 +164,6 @@
 <li><span class="me">Ebert, P.A.</span> (2010). &ldquo;Going to ground with concepts&rdquo; (review of C.S. Jenkins). <em>Metascience</em>, 19(2), 217&ndash;220.</li>
 <li><span class="me">Ebert, P.A.</span> and Cook, R.T. (2004). &ldquo;Discussion Note: Kit Fine&rsquo;s Limits of Abstraction.&rdquo; <em>British Journal of Philosophy of Science</em>, 55(4), 791&ndash;800.</li>
 </ul>
-
 <h2>Newspaper, Magazine and Other Articles</h2>
 <ul>
 <li>Schubert, T., Zsolt, K., and <span class="me">Ebert, P.A.</span> (2023). &ldquo;<a href="https://doi.org/10.4414/saez.2023.22151" target="_blank">Optimal aus Fehlern lernen</a>.&rdquo; <em>Schweiz &Auml;rzteztg.</em> 104(40), 72&ndash;73.</li>
@@ -181,12 +174,10 @@
 <li><span class="me">Ebert, P.A.</span> and Robertson, S. (2014). &ldquo;[Riskant]&ndash;[Trotzdem]&ndash;[Wegen]: Ein Pl&auml;doyer f&uuml;r das Risiko im Bergsport.&rdquo; <em>Alpenvereinsjahrbuch BERG 2014</em>, 138, pp.196&ndash;202.</li>
 <li><span class="me">Ebert, P.A.</span> (2008). &ldquo;What Mathematical Knowledge could not be.&rdquo; <em>Aporia</em>, 1(1), 46&ndash;70.</li>
 </ul>
-
 <h2>Repositories</h2>
-<p style="margin-top:0.5rem;"><a href="https://philpapers.org/profile/2493" target="_blank">PhilPeople</a> &nbsp;&middot;&nbsp; <a href="https://www.researchgate.net/profile/Philip_Ebert" target="_blank">ResearchGate</a> &nbsp;&middot;&nbsp; <a href="https://scholar.google.de/citations?hl=en&pli=1&user=mAlE3S8AAAAJ" target="_blank">Google Scholar</a></p>
+<p style="margin-top:0.5rem;"><a href="https://orcid.org/0000-0002-3730-0600" target="_blank">ORCID: 0000-0002-3730-0600</a> &nbsp;&middot;&nbsp; <a href="https://uni-salzburg.elsevierpure.com/en/persons/philip-ebert/" target="_blank">University of Salzburg PURE</a> &nbsp;&middot;&nbsp; <a href="https://philpapers.org/profile/2493" target="_blank">PhilPeople</a> &nbsp;&middot;&nbsp; <a href="https://www.researchgate.net/profile/Philip_Ebert" target="_blank">ResearchGate</a> &nbsp;&middot;&nbsp; <a href="https://scholar.google.de/citations?hl=en&pli=1&user=mAlE3S8AAAAJ" target="_blank">Google Scholar</a></p>
 </div></div>
 </div>
-
 <!-- CONTACT & CV -->
 <div id="page-contact" class="page">
 <div class="page-section"><div class="page-body">
@@ -197,6 +188,8 @@
 <div class="contact-info-card"><h3>Get in Touch</h3><p>Philip A. Ebert<br>Professor of Philosophy<br>Department of Philosophy<br>Paris Lodron University Salzburg<br>Franziskanergasse 1<br>5020 Salzburg, Austria</p><p><a href="mailto:philip.ebert@plus.ac.at">philip.ebert@plus.ac.at</a></p></div>
 <div style="margin-top:1.5rem;"><div class="profile-links">
 <a href="mailto:philip.ebert@plus.ac.at">&#9993;&ensp;Email</a>
+<a href="https://orcid.org/0000-0002-3730-0600" target="_blank">ORCID: 0000-0002-3730-0600</a>
+<a href="https://uni-salzburg.elsevierpure.com/en/persons/philip-ebert/" target="_blank">University of Salzburg PURE</a>
 <a href="https://www.linkedin.com/in/philip-ebert-8b92b215/" target="_blank">LinkedIn</a>
 <a href="https://www.researchgate.net/profile/Philip_Ebert" target="_blank">ResearchGate</a>
 <a href="https://scholar.google.de/citations?hl=en&pli=1&user=mAlE3S8AAAAJ" target="_blank">Google Scholar</a>
@@ -222,9 +215,7 @@
 </div>
 </div></div>
 </div>
-
 <footer class="footer"><div class="page-section"><p>&copy; 2025 Philip A. Ebert &middot; <a href="mailto:philip.ebert@plus.ac.at">Contact</a></p></div></footer>
-
 <script>
 function showPage(name){document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});document.getElementById('page-'+name).classList.add('active');document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.toggle('active',a.dataset.page===name)});document.querySelector('.nav-links').classList.remove('open');window.scrollTo(0,0);history.pushState(null,'',name==='home'?'/':'#'+name)}
 window.addEventListener('popstate',function(){var hash=window.location.hash.replace('#','');showPage(hash||'home')});
