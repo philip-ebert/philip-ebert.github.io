@@ -71,6 +71,9 @@
         .repo-bar a:hover { border-color: var(--accent); background: #fdf8f4; }
         .cv-entry { font-size: 0.92rem; margin-bottom: 0.6rem; line-height: 1.7; }
         .cv-date { font-family: var(--sans); font-size: 0.78rem; color: var(--text-secondary); }
+        .photo-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; padding: 0.5rem 0 0; }
+        .photo-row img { width: 120px; height: auto; border-radius: 4px; border: 1px solid var(--border); box-shadow: 0 1px 4px var(--shadow); }
+        @media (max-width: 720px) { .photo-row img { width: 90px; } .photo-row { gap: 0.75rem; } }
         .footer { border-top: 1px solid var(--border); padding: 1.75rem 0; text-align: center; }
         .footer p { font-family: var(--sans); font-size: 0.75rem; color: var(--text-secondary); }
         .footer a { color: var(--text-secondary); }
@@ -96,6 +99,11 @@
 <li>Early Analytic Philosophy: Gottlob Frege</li>
 <li>Philosophy of Mathematics: Logicism &amp; Abstractionism</li>
 </ul>
+<div class="photo-row">
+<img src="images/9780198712084.jpeg" alt="Essays on Frege's Basic Laws of Arithmetic">
+<img src="images/9780198777304.jpg" alt="Basic Laws of Arithmetic">
+<img src="images/9780199645268-1.jpg" alt="Abstractionism">
+</div>
 </div>
 <div class="contact-card"><h3>Contact</h3><p>Philip A. Ebert<br>Professor of Philosophy<br>Department of Philosophy<br>Paris Lodron University Salzburg<br>Franziskanergasse 1<br>5020 Salzburg, Austria</p><p><a href="mailto:philip.ebert@plus.ac.at">philip.ebert@plus.ac.at</a></p></div>
 </div></section>
